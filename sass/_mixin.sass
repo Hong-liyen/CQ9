@@ -1,0 +1,45 @@
+
+=size($w,$h:$w,$bdrs:0)
+    width: $w
+    height: $h
+    border-radius: $bdrs
+
+=flex($j:center,$a:center)
+    display: flex
+    justify-content: $j
+    align-items: $a
+
+=abpos($l:initial,$t:initial)
+    position: absolute
+    content: ''
+    left: $l
+    top: $t
+
+=clearfix
+    &:after, &:before
+        content: ''
+        display: table
+    &:after
+        clear:both
+    &
+        *zoom: 1
+
+=block 
+    display: block
+    width: 100%
+
+=bg($img) 
+    background: url("../images/#{$img}")
+    width: image-width("../images/#{$img}")
+    height: image-height("../images/#{$img}")  
+
+=breakpoint($point)
+    @if $point == pc
+        @media only screen and (max-width: 1024px)
+            @content 
+    @else if $point == pad 
+        @media only screen and (max-width: 768px)  
+            @content 
+    @else if $point == mobile 
+        @media only screen and (max-width: 320px)   
+            @content 

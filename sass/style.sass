@@ -1,0 +1,333 @@
+@import compass
+@import mixin
+$lightBlue: #089ab3
+$darkBlue: #002363
+$yellow: #fef608
+
+*,*:before,*:after
+    box-sizing: border-box
+
+html,body
+    margin: 0
+    padding: 0
+    +size(100%, 100vh)
+    
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p 
+    font-family: 'Microsoft Yahei'
+
+a 
+    text-decoration: none
+ul 
+    padding-left: 0
+    li 
+        list-style: none
+
+   
+
+// slick  
+.slick-slider
+    position: relative
+    width: 100%
+    display: block
+    box-sizing: border-box
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+    .slick-slide
+        display: none
+        float: left
+        height: 100%
+        min-height: 1px
+        width: 100%
+        &:focus, &:hover
+            outline: 0
+        img
+            position: relative            
+            display: block
+            height: auto
+            width: 100%
+
+    .slick-prev, .slick-next
+        opacity: 0
+        position: absolute
+
+    .slick-dots,button
+        display: none  
+
+// pc 版
+@media (min-width: 769px) 
+    .mobile 
+        display: none
+    body 
+        min-height: 900px
+        background-color: $lightBlue
+        
+    .tab-container
+        position: relative
+        border-top: 6px solid #0759a5
+        line-height: 1.8em
+        background-image: url(../images/pc-bg.jpg)
+        background-repeat: no-repeat
+        background-position: bottom 
+        background-size: cover
+        .container
+            position: relative 
+            margin: 0 auto
+            width: 800px
+            min-height: 800px
+        .tab-left,.tab-right 
+            position: absolute
+            z-index: 2
+        .tab-left 
+            top: -12px 
+            left: -10px
+        .tab-right 
+            top: -6px 
+            right: -10px
+        .nav-tabs
+            position: absolute
+            border-bottom: 0
+            top: -15px
+            margin: 0 auto
+            width: 97%
+            background: linear-gradient(to bottom, #319df7  30%, #247cf7)
+            box-shadow: 0 8px 1px #06489e
+            border: 1px solid #319df7
+            color: #0250b4
+            border-top-left-radius: 95px
+            border-top-right-radius: 95px
+            border-bottom-right-radius: 210px
+            border-bottom-left-radius: 210px
+            overflow: hidden
+        .nav>li>a
+            padding: 10px 85px
+            color: #0d57d8
+            font-size: 1.6em
+            font-weight: bold
+            // border-right: 1px solid #0d57d8
+            border-left: 1px solid #1577de
+        
+        .nav-tabs>li>a:hover, .nav-tabs>li>a:focus
+            background: linear-gradient(to bottom, #1577de  30%, #0d59dd)
+            color: $yellow
+            padding: 10px 85px
+            border-bottom: 0
+            font-size: 1.6em
+            border: 0
+        .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus
+            background: linear-gradient(to bottom, #1577de  30%, #0d59dd)
+            color: $yellow
+            font-weight: bold
+            font-size: 1.6em
+            border: 0
+        .nav-tabs>li.active>a#game, .nav-tabs>li.active>a#game:hover, .nav-tabs>li.active>a#game:focus,.nav-tabs>li>a#game:hover, .nav-tabs>li>a#game:focus
+            background: url(../images/tab03.png) no-repeat 225px 27px,linear-gradient(to bottom, #1577de  30%, #0d59dd)
+        .caption
+            font-weight: bold
+            margin: 2em 0
+            color: $lightBlue
+            font-size: 1.4em
+            text-align: center
+            padding: 0
+            line-height: 1.8
+        .nav-tabs 
+            position: relative
+            img 
+                position: absolute 
+                &:nth-child(1)
+                    left: -10%
+                &:nth-child(1)
+                    right: -10%
+        .tab-pane
+            position: relative
+            border-radius: 60px
+            background: linear-gradient(to bottom, $lightBlue  30%, transparent)
+            color: $yellow
+            padding-bottom: 2em
+            box-shadow: 0 2px 2px rgba($lightBlue,0.2)
+            .photo-left, .photo-right
+                position: absolute
+            .photo-left 
+                left: -10%
+                top: 22%
+            .photo-right 
+                bottom: -28%
+                right: -16%
+            
+            .tab-box
+                padding: 15px 30px
+                min-height: 40vh
+            img 
+                padding: 2vw 0 1vw
+            .title,.introduce  
+                display: inline-block
+                * 
+                    margin: 0
+                    padding: 0
+                    font-weight: 500
+            .title
+                background: url(../images/title-left.png) no-repeat left top, url(../images/title-right.png) no-repeat right top
+                width: calc(100% - 50% - 20px*2)
+                float: left
+                text-align: center
+                .titlebox
+                    margin: 0 auto 1.8vw
+                    min-height: 120px
+                    width: 60%
+                    text-align: left
+                    span 
+                        font-size: 1.6em
+                    h1 
+                        font-size: 2.2em
+                        line-height: 1.5
+                    p 
+                        font-size: 1.2em
+                .imgbox
+                    border: 8px solid #02548e
+                    border-radius: 35px
+                    overflow: hidden
+                    margin-top: 1.8vw 
+                    img 
+                        width: 100%
+            .introduce
+                padding-left: 1em
+                .introduce-box
+                    margin-bottom: 1.5vw
+                    &:nth-child(3)
+                        margin-bottom: 0
+                    h3 
+                        line-height: 1.8
+                    p 
+                        margin-left: 1.3em
+                        font-size: 1.1em
+                    img 
+                        margin-right: 0.5vw 
+                        width: 11px  
+                        height: 11px
+        a.button 
+            background-image: url(../images/button.png)
+            background-repeat: no-repeat
+            background-position: center center 
+            background-size: contain
+            display: block
+            width: 338px 
+            height: 130px
+            margin: 80px auto 50px
+            transition: background-color 0.5s
+            &:hover 
+                background-image: url(../images/button-h.png)
+       
+                
+
+        
+
+// 手机版样式
+@media (max-width: 769px) 
+    .pc 
+        display: none
+    
+    body 
+        background-color: $darkBlue
+        line-height: 1.8em
+        
+    .caption
+        font-weight: bold
+        margin: 1.4em 0
+        color: $lightBlue
+        font-size: 1.4em
+        text-align: center
+        padding: 0 1.4em 
+        line-height: 1.8
+
+
+    section.contain 
+        padding: 2em 1.6em    
+        border-top: 2px dashed $lightBlue
+
+    .CQ9-box 
+        padding: 1.2em 0
+        border-radius: 12px
+        padding: 1.6em 1em 
+        background: linear-gradient(to bottom, $lightBlue  30%, transparent)        
+        box-shadow: 0 2px 2px rgba($lightBlue,0.2)        
+        color: $yellow
+        >div 
+            display: inline-block
+            * 
+                margin: 0
+                padding: 0
+                font-weight: 500    
+            
+        .title 
+            width: 40%
+            float: left
+            span 
+                font-size: 1.4em
+            h1 
+                font-size: 2.5em
+                line-height: 1.8
+            p 
+                font-size: 1.2em
+            img 
+                margin-top: 2.7vw
+                width: 80%
+        .introduce
+            width: 60%
+            padding-left: 1em
+            .introduce-box
+                margin-bottom: 2.8vw
+                &:nth-child(3)
+                    margin-bottom: 0
+                h3 
+                    line-height: 1.8
+                p 
+                    font-size: 1.1em
+                    margin-left: 2.2vw
+                img 
+                    margin-right: 0.5vw
+    a.button-h5 
+        background-image: url(../images/button-h5.png)
+        background-repeat: no-repeat
+        background-position: center center 
+        background-size: contain
+        display: block
+        width: 250px 
+        height: 96px
+        margin: 30px auto 50px
+        transition: background-color 0.5s
+        &:hover 
+            background-image: url(../images/button-h-h5.png)
+
+@media (max-width: 426px)
+    .CQ9-box
+        .title
+            img
+                width: 100%
+                margin-top: 14.5vw
+            #game 
+                margin-top: 9vw
+
+@media (max-width: 321px)
+    .CQ9-box
+        .title
+            span 
+                font-size: 1.2em
+            p 
+                font-size: 1em
+            img#tiger
+                margin-top: 35vw
+            h1 
+                font-size: 1.8em
+            
+                 
