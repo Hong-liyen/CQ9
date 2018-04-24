@@ -8,6 +8,7 @@ $yellow: #fef608
     box-sizing: border-box
 
 html,body
+    letter-spacing: 1px    
     margin: 0
     padding: 0
     +size(100%, 100vh)
@@ -61,12 +62,83 @@ ul
     .slick-prev, .slick-next
         opacity: 0
         position: absolute
+    
+    .slick-dots 
+        position: absolute
+        bottom: 16px
+        display: block
+        width: 100%
+        padding: 0
+        margin: 0
+        list-style: none
+        text-align: center
 
-    .slick-dots,button
-        display: none  
+
+    .slick-dots li 
+        position: relative
+        display: inline-block
+        width: 16px
+        background-color: #ccc
+        border-radius: 100%
+        height: 16px
+        margin: 8px
+        padding: 0
+        cursor: pointer
+
+
+    .slick-dots li button 
+        font-size: 0
+        line-height: 0
+        display: block
+        width: 16px
+        height: 16px
+        padding: 8px
+        cursor: pointer
+        color: transparent
+        border: 0
+        outline: none
+        background: transparent
+
+
+    .slick-dots li button:hover,
+    .slick-dots li button:focus 
+        outline: none
+
+
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before 
+        opacity: 1
+
+
+    .slick-dots li button:before 
+        font-size: 16px
+        line-height: 1
+        position: absolute
+        top: 0
+        left: 0
+        width: 16px
+        height: 16px
+        text-align: center
+        opacity: .25
+        color: black
+
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        transition: opacity 0.25s
+
+
+    .slick-dots li.slick-active button:before 
+        opacity: .75
+        color: black
+       
+
+    .slick-dots li.slick-active
+        background-color: #000
 
 // pc 版
 @media (min-width: 769px) 
+    .pc 
+        height: 100vh
     .mobile 
         display: none
     body 
@@ -84,23 +156,22 @@ ul
         .container
             position: relative 
             margin: 0 auto
-            width: 800px
-            min-height: 800px
+            
         .tab-left,.tab-right 
             position: absolute
             z-index: 2
         .tab-left 
             top: -12px 
-            left: -10px
+            left: 90px
         .tab-right 
             top: -6px 
-            right: -10px
+            right: 90px
         .nav-tabs
             position: absolute
             border-bottom: 0
             top: -15px
             margin: 0 auto
-            width: 97%
+            width: 80%
             background: linear-gradient(to bottom, #319df7  30%, #247cf7)
             box-shadow: 0 8px 1px #06489e
             border: 1px solid #319df7
@@ -110,34 +181,39 @@ ul
             border-bottom-right-radius: 210px
             border-bottom-left-radius: 210px
             overflow: hidden
+        .nav>li,.nav>li.active 
+            width: calc(100% / 3)
         .nav>li>a
-            padding: 10px 85px
+            width: 100%
+            padding: 10px 0
             color: #0d57d8
-            font-size: 1.6em
+            font-size: 2em
             font-weight: bold
+            text-align: center
             // border-right: 1px solid #0d57d8
             border-left: 1px solid #1577de
         
         .nav-tabs>li>a:hover, .nav-tabs>li>a:focus
             background: linear-gradient(to bottom, #1577de  30%, #0d59dd)
             color: $yellow
-            padding: 10px 85px
+            padding: 10px 0
             border-bottom: 0
-            font-size: 1.6em
+            font-size: 2em
             border: 0
         .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus
             background: linear-gradient(to bottom, #1577de  30%, #0d59dd)
             color: $yellow
             font-weight: bold
-            font-size: 1.6em
+            font-size: 2em
             border: 0
+            
         .nav-tabs>li.active>a#game, .nav-tabs>li.active>a#game:hover, .nav-tabs>li.active>a#game:focus,.nav-tabs>li>a#game:hover, .nav-tabs>li>a#game:focus
-            background: url(../images/tab03.png) no-repeat 225px 27px,linear-gradient(to bottom, #1577de  30%, #0d59dd)
+            background: url(../images/tab03.png) no-repeat 265px 30px,linear-gradient(to bottom, #1577de  30%, #0d59dd)
         .caption
-            font-weight: bold
-            margin: 2em 0
-            color: $lightBlue
-            font-size: 1.4em
+            margin: 2em auto
+            width: 85%
+            color: #00f0ff
+            font-size: 1.6em
             text-align: center
             padding: 0
             line-height: 1.8
@@ -155,20 +231,36 @@ ul
             background: linear-gradient(to bottom, $lightBlue  30%, transparent)
             color: $yellow
             box-shadow: 0 2px 2px rgba($lightBlue,0.2)
+            min-height: 650px
+            
             .photo-left, .photo-right
                 position: absolute
             .photo-left 
-                left: -10%
+                left: -5%
                 top: 22%
+            #img-tiger-left 
+                left: -5%
+                top: 18%
+            #img-fish-left,#img-game-left 
+                left: -7%
             .photo-right 
-                bottom: -28%
+                bottom: -2%
                 right: -16%
-            
+            #img-tiger-right 
+                right: -3%
+                bottom: -10%
+            #img-fish-right
+                right: -13%
+                bottom: -20%
+            #img-game-right
+                right: -10% 
+                bottom: -25%
             .tab-box
                 padding: 15px 30px
                 min-height: 40vh
             img 
-                padding: 2vw 0 1vw
+                padding-top: 20px
+
             .title,.introduce  
                 display: inline-block
                 * 
@@ -176,40 +268,43 @@ ul
                     padding: 0
                     font-weight: 500
             .title
-                background: url(../images/title-left.png) no-repeat left top, url(../images/title-right.png) no-repeat right top
-                width: calc(100% - 50% - 20px*2)
+                background: url(../images/title-left.png) no-repeat left top, url(../images/title-right.png) no-repeat 60% top
+                width: calc(100% - 45% - 20px*2)
                 float: left
                 text-align: center
                 .titlebox
-                    margin: 0 auto 1.8vw
+                    margin: 0.5vw auto 1.8vw
                     min-height: 120px
-                    width: 60%
+                    width: 75%
                     text-align: left
                     span 
-                        font-size: 1.6em
+                        font-size: 1.8em
                     h1 
-                        font-size: 2.2em
+                        font-size: 2.4em
                         line-height: 1.5
                     p 
-                        font-size: 1.2em
+                        font-size: 1.4em
                 .imgbox
                     border: 8px solid #02548e
                     border-radius: 35px
                     overflow: hidden
-                    margin-top: 1.8vw 
+                    margin-top: 4.5vw 
                     img 
                         width: 100%
             .introduce
                 padding-left: 1em
                 .introduce-box
-                    margin-bottom: 1.5vw
+                    margin: 2vw 0
+                    margin-left: 0.5vw
                     &:nth-child(3)
                         margin-bottom: 0
                     h3 
                         line-height: 1.8
                     p 
                         margin-left: 1.3em
-                        font-size: 1.1em
+                        font-size: 1.2em
+                        line-height: 1.8
+                        font-weight: 300
                     img 
                         margin-right: 0.5vw 
                         width: 11px  
@@ -233,10 +328,40 @@ ul
             transition: background-color 0.5s
             &:hover 
                 background-image: url(../images/button-h.png)
-       
-                
 
-        
+
+@media (max-width: 1025px) and (min-width: 769px)  
+    .tab-container
+        .container
+            margin: 0 auto
+            width: 860px
+            .tab-left 
+                left: 40px
+            .tab-right 
+                right: 60px
+            .nav-tabs>li.active>a#game, .nav-tabs>li.active>a#game:hover, .nav-tabs>li.active>a#game:focus,.nav-tabs>li>a#game:hover, .nav-tabs>li>a#game:focus
+                background: url(../images/tab03.png) no-repeat 185px 30px,linear-gradient(to bottom, #1577de  30%, #0d59dd)
+            .title
+                background: url(../images/title-left.png) no-repeat left top, url(../images/title-right.png) no-repeat 80% top
+                width: calc(100% - 50% - 20px*2)
+                .titlebox
+                    min-height: 120px
+                    width: 70%
+            .tab-pane
+                min-height: 380px
+                #img-tiger-right
+                    width: 30% 
+                    right: -6%
+                    bottom: -35%
+                #img-fish-right
+                    width: 40% 
+                    right: -8%
+                    bottom: -32%
+                #img-game-right
+                    width: 35% 
+                    right: -10% 
+                    bottom: -30%
+
 
 // 手机版样式
 @media (max-width: 769px) 
