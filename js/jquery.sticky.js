@@ -52,8 +52,7 @@
                         s.stickyElement
                             .css('position', 'fixed')
                             .css('top', newTop)
-                            .css('width', '890px')
-                            .css('margin', '0 20px')
+                            .css('width', '800px')
                             .addClass(s.className);
                         s.stickyElement.parent().addClass(s.className);
                         s.currentTop = newTop;

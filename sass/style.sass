@@ -157,20 +157,22 @@ ul
             
         .tab-left,.tab-right 
             position: absolute
-            z-index: 99999
+            
         .tab-left 
             top: -8px 
-            left: 60px
+            left: 55px
+            z-index: 2
         .tab-right 
             top: 0px 
-            right: 70px
+            right: 36px
+            
         
         .nav-tabs
             position: absolute
             border-bottom: 0
             top: -1px
-            margin: 0 auto
-            width: 80%
+            margin: 0 5%
+            
             background: linear-gradient(to bottom, #319df7  30%, #247cf7)
             box-shadow: 0 8px 1px #06489e
             border: 1px solid #319df7
@@ -221,7 +223,7 @@ ul
             border: 0
             
         .nav-tabs>li.active>a#game, .nav-tabs>li.active>a#game:hover, .nav-tabs>li.active>a#game:focus,.nav-tabs>li>a#game:hover, .nav-tabs>li>a#game:focus
-            background: url(../images/tab03.png) no-repeat 215px 35px,linear-gradient(to bottom, #1577de  30%, #0d59dd)
+            background: url(../images/tab03.png) no-repeat 245px 35px,linear-gradient(to bottom, #1577de  30%, #0d59dd)
         .caption
             margin: 30px auto
             width: 90%
@@ -340,7 +342,7 @@ ul
             transition: background-color 0.5s
             &:hover 
                 background-image: url(../images/button-h.png)
-                
+
 
 
 @media (max-width: 1025px) and (min-width: 769px)  
@@ -351,7 +353,7 @@ ul
             .tab-left 
                 left: 40px
             .tab-right 
-                right: 60px
+                right: 30px
             .nav-tabs>li.active>a#game, .nav-tabs>li.active>a#game:hover, .nav-tabs>li.active>a#game:focus,.nav-tabs>li>a#game:hover, .nav-tabs>li>a#game:focus
                 background: url(../images/tab03.png) no-repeat 185px 30px,linear-gradient(to bottom, #1577de  30%, #0d59dd)
             .title
