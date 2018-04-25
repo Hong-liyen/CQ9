@@ -284,23 +284,13 @@
 
 //         });
 //     })
-    var aaa = function(){
+var aaa = function(){
    var $this = this;
   this.nav_fn = function(){
     // rwd選單
     $(".nav-icon").on('click', function() {
         $(this).toggleClass("on");
         $(".menu ul").toggleClass('hidden');
-    });
-  }
-  this.header_fn = function(){
-    $('a.external').on('click',function() {
-        var url = $(this).attr('href');
-        $('.mask').fadeIn(250, function() {
-            document.location.href = url;
-        });
-        $("#loader").fadeIn("slow");
-        return false;
     });
   }
   this.scroll_fn = function(){
@@ -315,7 +305,7 @@
                   //up
                   if( current > 0 ){
                     $('html, body').animate({
-                      'scrollTop': val
+                      'scrollTop': 0
                     },500);
                   }
               //往下滾 data 是負值
@@ -334,6 +324,8 @@
       });
   }
   this.init = function(){
+    $this.nav_fn();
+    $this.scroll_fn();
     $('.slick').slick({
             dots: true,
             autoplay: true,
@@ -347,20 +339,5 @@
   }
   $this.init();
 }
-    $(function() {
-        
-        // 輪播
-        
-
-        
-        
-        
-
-        $(window).on('scroll',function(){
-
-          
-
-        });
-    })
-
+var bbb = new aaa();
 </script>
