@@ -189,13 +189,13 @@ ul li {
     top: 0px;
     right: 70px;
   }
-  /* line 167, ../sass/style.sass */
+  /* line 168, ../sass/style.sass */
   .tab-container .nav-tabs {
     position: absolute;
     border-bottom: 0;
     top: -1px;
     margin: 0 auto;
-    width: 80%;
+    width: 80% !important;
     background: linear-gradient(to bottom, #319df7 30%, #247cf7);
     box-shadow: 0 8px 1px #06489e;
     border: 1px solid #319df7;
@@ -206,11 +206,11 @@ ul li {
     border-bottom-left-radius: 210px;
     overflow: hidden;
   }
-  /* line 182, ../sass/style.sass */
+  /* line 183, ../sass/style.sass */
   .tab-container .nav > li, .tab-container .nav > li.active {
-    width: calc(100% / 3);
+    width: calc(100% / 3) !important;
   }
-  /* line 184, ../sass/style.sass */
+  /* line 185, ../sass/style.sass */
   .tab-container .nav > li > a {
     position: relative;
     width: 100%;
@@ -220,28 +220,28 @@ ul li {
     font-weight: bold;
     text-align: center;
   }
-  /* line 192, ../sass/style.sass */
+  /* line 193, ../sass/style.sass */
   .tab-container .nav > li > a:before, .tab-container .nav > li > a:after {
     position: absolute;
     content: "";
     height: 42px;
     width: 1px;
   }
-  /* line 197, ../sass/style.sass */
+  /* line 198, ../sass/style.sass */
   .tab-container .nav > li > a:before:nth-child(3), .tab-container .nav > li > a:after:nth-child(3) {
     background: transparent;
   }
-  /* line 200, ../sass/style.sass */
+  /* line 201, ../sass/style.sass */
   .tab-container .nav > li > a:before {
     left: -1px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #31a3f9 50%, rgba(0, 0, 0, 0));
   }
-  /* line 203, ../sass/style.sass */
+  /* line 204, ../sass/style.sass */
   .tab-container .nav > li > a:after {
     right: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #0d57d8 50%, rgba(0, 0, 0, 0));
   }
-  /* line 208, ../sass/style.sass */
+  /* line 209, ../sass/style.sass */
   .tab-container .nav-tabs > li > a:hover, .tab-container .nav-tabs > li > a:focus {
     background: linear-gradient(to bottom, #1577de 30%, #0d59dd);
     color: #ffd800;
@@ -250,7 +250,7 @@ ul li {
     font-size: 30px;
     border: 0;
   }
-  /* line 215, ../sass/style.sass */
+  /* line 216, ../sass/style.sass */
   .tab-container .nav-tabs > li.active > a, .tab-container .nav-tabs > li.active > a:hover, .tab-container .nav-tabs > li.active > a:focus {
     background: linear-gradient(to bottom, #1577de 30%, #0d59dd);
     color: #ffd800;
@@ -258,11 +258,11 @@ ul li {
     font-size: 30px;
     border: 0;
   }
-  /* line 222, ../sass/style.sass */
+  /* line 223, ../sass/style.sass */
   .tab-container .nav-tabs > li.active > a#game, .tab-container .nav-tabs > li.active > a#game:hover, .tab-container .nav-tabs > li.active > a#game:focus, .tab-container .nav-tabs > li > a#game:hover, .tab-container .nav-tabs > li > a#game:focus {
     background: url(../images/tab03.png) no-repeat 215px 35px, linear-gradient(to bottom, #1577de 30%, #0d59dd);
   }
-  /* line 224, ../sass/style.sass */
+  /* line 225, ../sass/style.sass */
   .tab-container .caption {
     margin: 30px auto;
     width: 90%;
@@ -272,23 +272,23 @@ ul li {
     padding: 0;
     line-height: 1.8;
   }
-  /* line 232, ../sass/style.sass */
+  /* line 233, ../sass/style.sass */
   .tab-container .nav-tabs {
     position: relative;
   }
-  /* line 234, ../sass/style.sass */
+  /* line 235, ../sass/style.sass */
   .tab-container .nav-tabs img {
     position: absolute;
   }
-  /* line 236, ../sass/style.sass */
+  /* line 237, ../sass/style.sass */
   .tab-container .nav-tabs img:nth-child(1) {
     left: -10%;
   }
-  /* line 238, ../sass/style.sass */
+  /* line 239, ../sass/style.sass */
   .tab-container .nav-tabs img:nth-child(1) {
     right: -10%;
   }
-  /* line 240, ../sass/style.sass */
+  /* line 241, ../sass/style.sass */
   .tab-container .tab-pane {
     position: relative;
     border-radius: 60px;
@@ -297,138 +297,138 @@ ul li {
     box-shadow: 0 2px 2px rgba(8, 154, 179, 0.2);
     height: 550px;
   }
-  /* line 248, ../sass/style.sass */
+  /* line 249, ../sass/style.sass */
   .tab-container .tab-pane .photo-left, .tab-container .tab-pane .photo-right {
     position: absolute;
   }
-  /* line 250, ../sass/style.sass */
+  /* line 251, ../sass/style.sass */
   .tab-container .tab-pane .photo-left {
     left: -5%;
     top: 15%;
   }
-  /* line 253, ../sass/style.sass */
+  /* line 254, ../sass/style.sass */
   .tab-container .tab-pane #img-tiger-left {
     width: 11%;
     left: -5%;
     top: 14%;
   }
-  /* line 257, ../sass/style.sass */
+  /* line 258, ../sass/style.sass */
   .tab-container .tab-pane #img-fish-left, .tab-container .tab-pane #img-game-left {
     left: -10%;
   }
-  /* line 259, ../sass/style.sass */
+  /* line 260, ../sass/style.sass */
   .tab-container .tab-pane .photo-right {
     bottom: -2%;
     right: -16%;
   }
-  /* line 262, ../sass/style.sass */
+  /* line 263, ../sass/style.sass */
   .tab-container .tab-pane #img-tiger-right {
-    right: -5%;
-    bottom: -25%;
+    right: -15%;
+    bottom: -10%;
   }
-  /* line 265, ../sass/style.sass */
+  /* line 266, ../sass/style.sass */
   .tab-container .tab-pane #img-fish-right {
     right: -17%;
     bottom: -30%;
   }
-  /* line 268, ../sass/style.sass */
+  /* line 269, ../sass/style.sass */
   .tab-container .tab-pane #img-game-right {
     right: -15%;
     bottom: -25%;
   }
-  /* line 271, ../sass/style.sass */
+  /* line 272, ../sass/style.sass */
   .tab-container .tab-pane .tab-box {
     padding: 65px 30px 15px;
     min-height: 40vh;
   }
-  /* line 274, ../sass/style.sass */
+  /* line 275, ../sass/style.sass */
   .tab-container .tab-pane img {
     padding-top: 14px;
   }
-  /* line 277, ../sass/style.sass */
+  /* line 278, ../sass/style.sass */
   .tab-container .tab-pane .title, .tab-container .tab-pane .introduce {
     display: inline-block;
   }
-  /* line 279, ../sass/style.sass */
+  /* line 280, ../sass/style.sass */
   .tab-container .tab-pane .title *, .tab-container .tab-pane .introduce * {
     margin: 0;
     padding: 0;
     font-weight: 500;
   }
-  /* line 283, ../sass/style.sass */
+  /* line 284, ../sass/style.sass */
   .tab-container .tab-pane .title {
     background: url(../images/title-left.png) no-repeat left top, url(../images/title-right.png) no-repeat 65% top;
     width: calc(100% - 45% - 20px*2);
     float: left;
     text-align: center;
   }
-  /* line 288, ../sass/style.sass */
+  /* line 289, ../sass/style.sass */
   .tab-container .tab-pane .title .titlebox {
     margin: 0 auto 1.8vw;
     min-height: 120px;
     width: 80%;
     text-align: left;
   }
-  /* line 293, ../sass/style.sass */
+  /* line 294, ../sass/style.sass */
   .tab-container .tab-pane .title .titlebox span {
     font-size: 30px;
   }
-  /* line 295, ../sass/style.sass */
+  /* line 296, ../sass/style.sass */
   .tab-container .tab-pane .title .titlebox h1 {
     font-size: 55px;
     line-height: 1.3;
   }
-  /* line 298, ../sass/style.sass */
+  /* line 299, ../sass/style.sass */
   .tab-container .tab-pane .title .titlebox p {
     font-size: 18px;
   }
-  /* line 300, ../sass/style.sass */
+  /* line 301, ../sass/style.sass */
   .tab-container .tab-pane .title .imgbox {
     border: 8px solid #02548e;
     border-radius: 35px;
     overflow: hidden;
     margin-top: 15px;
   }
-  /* line 305, ../sass/style.sass */
+  /* line 306, ../sass/style.sass */
   .tab-container .tab-pane .title .imgbox img {
     width: 100%;
   }
-  /* line 307, ../sass/style.sass */
+  /* line 308, ../sass/style.sass */
   .tab-container .tab-pane .introduce {
     padding-left: 22px;
   }
-  /* line 309, ../sass/style.sass */
+  /* line 310, ../sass/style.sass */
   .tab-container .tab-pane .introduce .introduce-box {
     margin: 25px 0;
     margin-left: 0.5vw;
   }
-  /* line 312, ../sass/style.sass */
+  /* line 313, ../sass/style.sass */
   .tab-container .tab-pane .introduce .introduce-box:nth-child(1) {
     margin-top: 36px;
   }
-  /* line 314, ../sass/style.sass */
+  /* line 315, ../sass/style.sass */
   .tab-container .tab-pane .introduce .introduce-box:nth-child(3) {
     margin-bottom: 0;
   }
-  /* line 316, ../sass/style.sass */
+  /* line 317, ../sass/style.sass */
   .tab-container .tab-pane .introduce .introduce-box h3 {
     margin-bottom: 10px;
     font-size: 30px;
   }
-  /* line 319, ../sass/style.sass */
+  /* line 320, ../sass/style.sass */
   .tab-container .tab-pane .introduce .introduce-box p {
     margin-left: 1em;
     font-size: 18px;
     line-height: 1.8;
     opacity: 0.7;
   }
-  /* line 324, ../sass/style.sass */
+  /* line 325, ../sass/style.sass */
   .tab-container .tab-pane .introduce .introduce-box img {
     margin-right: 4px;
     width: 11px;
     height: 11px;
   }
-  /* line 329, ../sass/style.sass */
+  /* line 330, ../sass/style.sass */
   .tab-container a.button {
     background-image: url(../images/button.png);
     background-repeat: no-repeat;
@@ -437,81 +437,81 @@ ul li {
     display: block;
     width: 338px;
     height: 130px;
-    margin: 100px auto 50px;
+    margin: 60px auto 50px;
     transition: background-color 0.5s;
   }
-  /* line 339, ../sass/style.sass */
+  /* line 340, ../sass/style.sass */
   .tab-container a.button:hover {
     background-image: url(../images/button-h.png);
   }
 }
 @media (max-width: 1025px) and (min-width: 769px) {
-  /* line 346, ../sass/style.sass */
+  /* line 347, ../sass/style.sass */
   .tab-container .container {
     margin: 0 auto;
     width: 860px;
   }
-  /* line 349, ../sass/style.sass */
+  /* line 350, ../sass/style.sass */
   .tab-container .container .tab-left {
     left: 40px;
   }
-  /* line 351, ../sass/style.sass */
+  /* line 352, ../sass/style.sass */
   .tab-container .container .tab-right {
     right: 60px;
   }
-  /* line 353, ../sass/style.sass */
+  /* line 354, ../sass/style.sass */
   .tab-container .container .nav-tabs > li.active > a#game, .tab-container .container .nav-tabs > li.active > a#game:hover, .tab-container .container .nav-tabs > li.active > a#game:focus, .tab-container .container .nav-tabs > li > a#game:hover, .tab-container .container .nav-tabs > li > a#game:focus {
     background: url(../images/tab03.png) no-repeat 185px 30px, linear-gradient(to bottom, #1577de 30%, #0d59dd);
   }
-  /* line 355, ../sass/style.sass */
+  /* line 356, ../sass/style.sass */
   .tab-container .container .title {
     background: url(../images/title-left.png) no-repeat left top, url(../images/title-right.png) no-repeat 80% top;
     width: calc(100% - 50% - 20px*2);
   }
-  /* line 358, ../sass/style.sass */
+  /* line 359, ../sass/style.sass */
   .tab-container .container .title .titlebox {
     min-height: 120px;
     width: 65%;
   }
-  /* line 361, ../sass/style.sass */
+  /* line 362, ../sass/style.sass */
   .tab-container .container .title .titlebox span {
     font-size: 20px;
   }
-  /* line 363, ../sass/style.sass */
+  /* line 364, ../sass/style.sass */
   .tab-container .container .title .titlebox h1 {
     font-size: 45px;
     line-height: 1.3;
   }
-  /* line 366, ../sass/style.sass */
+  /* line 367, ../sass/style.sass */
   .tab-container .container .title .titlebox p {
     font-size: 14px;
   }
-  /* line 369, ../sass/style.sass */
+  /* line 370, ../sass/style.sass */
   .tab-container .container .tab-pane {
     height: 480px;
   }
-  /* line 371, ../sass/style.sass */
+  /* line 372, ../sass/style.sass */
   .tab-container .container .tab-pane #img-fish-left, .tab-container .container .tab-pane #img-game-left {
     width: 18%;
     top: 18%;
   }
-  /* line 374, ../sass/style.sass */
+  /* line 375, ../sass/style.sass */
   .tab-container .container .tab-pane #img-tiger-left {
     top: 18%;
   }
-  /* line 376, ../sass/style.sass */
+  /* line 377, ../sass/style.sass */
   .tab-container .container .tab-pane #img-tiger-right {
     width: 30%;
     right: -8%;
     bottom: -35%;
   }
-  /* line 380, ../sass/style.sass */
+  /* line 381, ../sass/style.sass */
   .tab-container .container .tab-pane #img-fish-right {
     width: 40%;
     right: -10%;
     bottom: -32%;
   }
-  /* line 384, ../sass/style.sass */
+  /* line 385, ../sass/style.sass */
   .tab-container .container .tab-pane #img-game-right {
     width: 35%;
     right: -10%;
@@ -519,23 +519,23 @@ ul li {
   }
 }
 @media (max-width: 769px) {
-  /* line 392, ../sass/style.sass */
+  /* line 393, ../sass/style.sass */
   .pc {
     display: none;
   }
 
-  /* line 395, ../sass/style.sass */
+  /* line 396, ../sass/style.sass */
   body {
     background-color: #002363;
     line-height: 1.8em;
   }
 
-  /* line 399, ../sass/style.sass */
+  /* line 400, ../sass/style.sass */
   .logo {
     margin-top: 1em;
   }
 
-  /* line 402, ../sass/style.sass */
+  /* line 403, ../sass/style.sass */
   .caption {
     margin: 1.4em 0;
     color: #00f0ff;
@@ -545,13 +545,13 @@ ul li {
     line-height: 1.8;
   }
 
-  /* line 411, ../sass/style.sass */
+  /* line 412, ../sass/style.sass */
   section.contain {
     padding: 2em 1.6em;
     border-top: 2px dashed #089ab3;
   }
 
-  /* line 415, ../sass/style.sass */
+  /* line 416, ../sass/style.sass */
   .CQ9-box {
     padding: 1.2em 0;
     border-radius: 12px;
@@ -560,67 +560,67 @@ ul li {
     box-shadow: 0 2px 2px rgba(8, 154, 179, 0.2);
     color: #fef809;
   }
-  /* line 422, ../sass/style.sass */
+  /* line 423, ../sass/style.sass */
   .CQ9-box > div {
     display: inline-block;
   }
-  /* line 424, ../sass/style.sass */
+  /* line 425, ../sass/style.sass */
   .CQ9-box > div * {
     margin: 0;
     padding: 0;
     font-weight: 500;
   }
-  /* line 429, ../sass/style.sass */
+  /* line 430, ../sass/style.sass */
   .CQ9-box .title {
     width: 40%;
     float: left;
   }
-  /* line 432, ../sass/style.sass */
+  /* line 433, ../sass/style.sass */
   .CQ9-box .title span {
     font-size: 1.4em;
   }
-  /* line 434, ../sass/style.sass */
+  /* line 435, ../sass/style.sass */
   .CQ9-box .title h1 {
     font-size: 2.5em;
     line-height: 1.8;
   }
-  /* line 437, ../sass/style.sass */
+  /* line 438, ../sass/style.sass */
   .CQ9-box .title p {
     font-size: 1.2em;
   }
-  /* line 439, ../sass/style.sass */
+  /* line 440, ../sass/style.sass */
   .CQ9-box .title img {
     margin-top: 2.7vw;
     width: 80%;
   }
-  /* line 442, ../sass/style.sass */
+  /* line 443, ../sass/style.sass */
   .CQ9-box .introduce {
     width: 60%;
     padding-left: 1em;
   }
-  /* line 445, ../sass/style.sass */
+  /* line 446, ../sass/style.sass */
   .CQ9-box .introduce .introduce-box {
     margin-bottom: 2.8vw;
   }
-  /* line 447, ../sass/style.sass */
+  /* line 448, ../sass/style.sass */
   .CQ9-box .introduce .introduce-box:nth-child(3) {
     margin-bottom: 0;
   }
-  /* line 449, ../sass/style.sass */
+  /* line 450, ../sass/style.sass */
   .CQ9-box .introduce .introduce-box h3 {
     line-height: 1.8;
   }
-  /* line 451, ../sass/style.sass */
+  /* line 452, ../sass/style.sass */
   .CQ9-box .introduce .introduce-box p {
     font-size: 1.1em;
     margin-left: 2.2vw;
   }
-  /* line 454, ../sass/style.sass */
+  /* line 455, ../sass/style.sass */
   .CQ9-box .introduce .introduce-box img {
     margin-right: 0.5vw;
   }
 
-  /* line 456, ../sass/style.sass */
+  /* line 457, ../sass/style.sass */
   a.button-h5 {
     background-image: url(../images/button-h5.png);
     background-repeat: no-repeat;
@@ -632,40 +632,40 @@ ul li {
     margin: 30px auto 50px;
     transition: background-color 0.5s;
   }
-  /* line 466, ../sass/style.sass */
+  /* line 467, ../sass/style.sass */
   a.button-h5:hover {
     background-image: url(../images/button-h-h5.png);
   }
 }
 @media (max-width: 426px) {
-  /* line 472, ../sass/style.sass */
+  /* line 473, ../sass/style.sass */
   .CQ9-box .title img {
     width: 100%;
     margin-top: 16.5vw;
   }
-  /* line 475, ../sass/style.sass */
+  /* line 476, ../sass/style.sass */
   .CQ9-box .title #game {
     margin-top: 9vw;
   }
 }
 @media (max-width: 321px) {
-  /* line 481, ../sass/style.sass */
+  /* line 482, ../sass/style.sass */
   .CQ9-box .title span {
     font-size: 1.2em;
   }
-  /* line 483, ../sass/style.sass */
+  /* line 484, ../sass/style.sass */
   .CQ9-box .title p {
     font-size: 1em;
   }
-  /* line 485, ../sass/style.sass */
+  /* line 486, ../sass/style.sass */
   .CQ9-box .title img#tiger {
     margin-top: 36vw;
   }
-  /* line 487, ../sass/style.sass */
+  /* line 488, ../sass/style.sass */
   .CQ9-box .title img#game {
     margin-top: 18vw;
   }
-  /* line 489, ../sass/style.sass */
+  /* line 490, ../sass/style.sass */
   .CQ9-box .title h1 {
     font-size: 1.8em;
   }

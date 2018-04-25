@@ -21,22 +21,25 @@
             <img src="images/slick02.jpg">
         </div>
     </div>
+
     <div class="pc">
         <div class="tab-container">
             <div class="container">
                 <img src="images/tab01.png" alt="" class="tab-left">
                 <img src="images/tab02.png" alt="" class="tab-right">
-                <ul class="nav nav-tabs">
-                    <li class="active">
-                        <a data-toggle="tab" href="#tiger">老虎机</a>
-                    </li>
-                    <li>
-                        <a data-toggle="tab" href="#fish">捕鱼机</a>
-                    </li>
-                    <li>
-                        <a data-toggle="tab" href="#streetgame" id="game">街机游戏</a>
-                    </li>
-                </ul>
+                <div class="sticky-wrapper">
+                    <ul class="nav nav-tabs" id="navigation">
+                        <li class="active">
+                            <a data-toggle="tab" href="#tiger">老虎机</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#fish">捕鱼机</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#streetgame" id="game">街机游戏</a>
+                        </li>
+                    </ul>
+                </div>
                 <p class="caption">CQ9电子游戏总数已超过80款，游戏都是采自然机率设计，所有游戏的RNG都通过GLI的认证， 并且都是HTML5所开发，所以都有着高相容性，可运行在任何的设备上， 游戏也具备的多语系及多币別。
                 </p>
                 <div class="tab-content">
@@ -242,6 +245,7 @@
 <script src="js/jquery-2.1.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/slick.js"></script>
+<script src="js/jquery.sticky.js"></script>
 <script>
     $(function() {
         // rwd選單
@@ -251,10 +255,23 @@
         });
         // 輪播
         $('.slick').slick({
-            dots: true,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            speed: 400
-        })
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                speed: 400
+            })
+            // header
+        $("#navigation").sticky({
+            topSpacing: 0
+        });
+
+        $('a.external').click(function() {
+            var url = $(this).attr('href');
+            $('.mask').fadeIn(250, function() {
+                document.location.href = url;
+            });
+            $("#loader").fadeIn("slow");
+            return false;
+        });
     })
 </script>
