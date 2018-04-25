@@ -247,41 +247,120 @@
 <script src="js/slick.js"></script>
 <script src="js/jquery.sticky.js"></script>
 <script>
-    $(function() {
-        // rwd選單
-        $(".nav-icon").on('click', function() {
-            $(this).toggleClass("on");
-            $(".menu ul").toggleClass('hidden');
-        });
-        // 輪播
-        $('.slick').slick({
-                dots: true,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                speed: 400
-            })
-            // header
-        $("#navigation").sticky({
-            topSpacing: 0
-        });
+//     $(function() {
+//         // rwd選單
+//         $(".nav-icon").on('click', function() {
+//             $(this).toggleClass("on");
+//             $(".menu ul").toggleClass('hidden');
+//         });
+//         // 輪播
+//         $('.slick').slick({
+//                 dots: true,
+//                 autoplay: true,
+//                 autoplaySpeed: 3000,
+//                 speed: 400
+//             })
+//             // header
+//         $("#navigation").sticky({
+//             topSpacing: 0
+//         });
 
-        $('a.external').click(function() {
-            var url = $(this).attr('href');
-            $('.mask').fadeIn(250, function() {
-                document.location.href = url;
-            });
-            $("#loader").fadeIn("slow");
-            return false;
-        });
+//         $('a.external').click(function() {
+//             var url = $(this).attr('href');
+//             $('.mask').fadeIn(250, function() {
+//                 document.location.href = url;
+//             });
+//             $("#loader").fadeIn("slow");
+//             return false;
+//         });
         
-        var val = $('.pc' ).offset().top;
+//         var val = $('.pc' ).offset().top;
 
-        $(window).on('scroll',function(){
+//         $(window).on('scroll',function(){
 
 //           $('html, body').animate({
 //               'scrollTop': val
 //           },500);
 
+//         });
+//     })
+    var aaa = function(){
+   var $this = this;
+  this.nav_fn = function(){
+    // rwd選單
+    $(".nav-icon").on('click', function() {
+        $(this).toggleClass("on");
+        $(".menu ul").toggleClass('hidden');
+    });
+  }
+  this.header_fn = function(){
+    $('a.external').on('click',function() {
+        var url = $(this).attr('href');
+        $('.mask').fadeIn(250, function() {
+            document.location.href = url;
+        });
+        $("#loader").fadeIn("slow");
+        return false;
+    });
+  }
+  this.scroll_fn = function(){
+    var val = $('.pc' ).offset().top;
+    $(window).bind('mousewheel DOMMouseScroll', function(event) {
+          //判斷向上滾動 或是向下
+          var delta = event.wheelDelta || -event.detail || event.originalEvent.wheelDelta || -event.originalEvent.detail;
+          if( moving == 0 ){
+              moving = 1
+              //往上滾 data 是正值 
+              if(delta > 0){ 
+                  //up
+                  if( current > 0 ){
+                    $('html, body').animate({
+                      'scrollTop': val
+                    },500);
+                  }
+              //往下滾 data 是負值
+              }else{ 
+                  //down
+                  if( current < len-1){ 
+                    $('html, body').animate({
+                      'scrollTop': val
+                    },500);
+                  }
+              }
+              console.log(current)
+          }
+          _this.ani();
+          _this.move();
+      });
+  }
+  this.init = function(){
+    $('.slick').slick({
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 400
+        })
+        // header
+    $("#navigation").sticky({
+        topSpacing: 0
+    });
+  }
+  $this.init();
+}
+    $(function() {
+        
+        // 輪播
+        
+
+        
+        
+        
+
+        $(window).on('scroll',function(){
+
+          
+
         });
     })
+
 </script>
