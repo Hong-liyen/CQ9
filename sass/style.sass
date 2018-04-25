@@ -157,7 +157,7 @@ ul
             
         .tab-left,.tab-right 
             position: absolute
-            z-index: 2
+            z-index: 99999
         .tab-left 
             top: -8px 
             left: 60px
@@ -170,7 +170,7 @@ ul
             border-bottom: 0
             top: -1px
             margin: 0 auto
-            width: 80%!important
+            width: 80%
             background: linear-gradient(to bottom, #319df7  30%, #247cf7)
             box-shadow: 0 8px 1px #06489e
             border: 1px solid #319df7
@@ -181,7 +181,7 @@ ul
             border-bottom-left-radius: 210px
             overflow: hidden
         .nav>li,.nav>li.active 
-            width: calc(100% / 3)!important
+            width: calc(100% / 3)
         .nav>li>a
             position: relative
             width: 100%
@@ -238,6 +238,7 @@ ul
                     left: -10%
                 &:nth-child(1)
                     right: -10%
+        
         .tab-pane
             position: relative
             border-radius: 60px
@@ -339,7 +340,6 @@ ul
             transition: background-color 0.5s
             &:hover 
                 background-image: url(../images/button-h.png)
-
 
 
 @media (max-width: 1025px) and (min-width: 769px)  

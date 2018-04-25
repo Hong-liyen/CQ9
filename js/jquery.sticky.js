@@ -35,15 +35,14 @@
                         s.stickyElement
                             .css('position', '')
                             .css('top', '')
-                            .css('width','')
+                            .css('width', '')
                             .removeClass(s.className);
                         s.stickyElement.parent().removeClass(s.className);
                         s.currentTop = null;
                     }
-                }
-                else {
-                    var newTop = documentHeight - s.stickyElement.outerHeight()
-                        - s.topSpacing - s.bottomSpacing - scrollTop - extra;
+                } else {
+                    var newTop = documentHeight - s.stickyElement.outerHeight() -
+                        s.topSpacing - s.bottomSpacing - scrollTop - extra;
                     if (newTop < 0) {
                         newTop = newTop + s.topSpacing;
                     } else {
@@ -53,7 +52,8 @@
                         s.stickyElement
                             .css('position', 'fixed')
                             .css('top', newTop)
-                            .css('width','100%')
+                            .css('width', '890px')
+                            .css('margin', '0 20px')
                             .addClass(s.className);
                         s.stickyElement.parent().addClass(s.className);
                         s.currentTop = newTop;
@@ -102,8 +102,8 @@
     $.fn.sticky = function(method) {
         if (methods[method]) {
             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof method === 'object' || !method ) {
-            return methods.init.apply( this, arguments );
+        } else if (typeof method === 'object' || !method) {
+            return methods.init.apply(this, arguments);
         } else {
             $.error('Method ' + method + ' does not exist on jQuery.sticky');
         }
