@@ -273,5 +273,15 @@
             $("#loader").fadeIn("slow");
             return false;
         });
+        
+        var val = $('.pc' ).offset().top;
+
+        $(window).on('scroll',function(){
+
+          $('html, body').animate({
+              'scrollTop': val
+          },500);
+
+        });
     })
 </script>
