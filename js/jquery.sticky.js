@@ -53,6 +53,7 @@
                             .css('position', 'fixed')
                             .css('top', newTop)
                             .css('width', '800px')
+                            .css('zIndex', '99')
                             .addClass(s.className);
                         s.stickyElement.parent().addClass(s.className);
                         s.currentTop = newTop;

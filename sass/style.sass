@@ -161,11 +161,10 @@ ul
         .tab-left 
             top: -8px 
             left: 55px
-            z-index: 2
+            z-index: 100
         .tab-right 
             top: 0px 
-            right: 36px
-            
+            right: 35px
         
         .nav-tabs
             position: absolute
@@ -267,11 +266,11 @@ ul
                 right: -15%
                 bottom: -10%
             #img-fish-right
-                right: -17%
-                bottom: -30%
+                right: -20%
+                bottom: -15%
             #img-game-right
-                right: -15% 
-                bottom: -25%
+                right: -20% 
+                bottom: -10%
             .tab-box
                 padding: 65px 30px 15px
                 min-height: 40vh
@@ -342,6 +341,37 @@ ul
             transition: background-color 0.5s
             &:hover 
                 background-image: url(../images/button-h.png)
+    section 
+        position: relative
+        a.scroll
+            position: absolute
+            bottom: 12% 
+            left: 50%
+            color: #fff
+            text-shadow: 0 0 2px #444
+            z-index: 9999999
+            display: inline-block
+            -webkit-transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%)
+            letter-spacing: 0.1em
+            text-decoration: none
+            transition: opacity 0.3s
+            span.arrow
+                -webkit-transition: all 600ms cubic-bezier(0.17, 0.67, 0.83, 0.67)
+                transition: all 600ms cubic-bezier(0.17, 0.67, 0.83, 0.67)
+                animation: 3s ease-out 1s slidein
+                position: absolute
+                top: 20px
+                left: 50%
+                border-left: 4px solid #fff
+                border-bottom: 4px solid #fff
+                border-radius: 4px
+                margin-left: -15px
+                -webkit-transform: rotate(-45deg)
+                transform: rotate(-45deg)
+                box-sizing: border-box
+                width: 30px
+                height: 30px
 
 
 
@@ -393,7 +423,7 @@ ul
 
 // 手机版样式
 @media (max-width: 769px) 
-    .pc 
+    .pc, a.scroll 
         display: none
     
     body 

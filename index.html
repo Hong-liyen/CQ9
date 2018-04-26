@@ -11,18 +11,26 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="css/slick.css">
 </head>
+<style>
+
+</style>
 
 <body>
-    <div class="slider slick">
-        <div class="slide">
-            <img src="images/slick01.jpg">
+    <section class="section">
+        <div class="slider slick">
+            <div class="slide">
+                <img src="images/slick01.jpg">
+            </div>
+            <div class="slide">
+                <img src="images/slick02.jpg">
+            </div>
         </div>
-        <div class="slide">
-            <img src="images/slick02.jpg">
-        </div>
-    </div>
+        <a class="scroll" href="#pc">Scroll
+            <span class="arrow"></span>
+        </a>
+    </section>
 
-    <div class="pc">
+    <div class="pc" id="pc">
         <div class="tab-container">
             <div class="container">
                 <img src="images/tab01.png" alt="" class="tab-left">
@@ -246,13 +254,9 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/slick.js"></script>
 <script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
 <script>
     $(function() {
-        // rwd選單
-        $(".nav-icon").on('click', function() {
-            $(this).toggleClass("on");
-            $(".menu ul").toggleClass('hidden');
-        });
         // 輪播
         $('.slick').slick({
                 dots: true,
@@ -264,14 +268,17 @@
         $("#navigation").sticky({
             topSpacing: 0
         });
-
-        $('a.external').click(function() {
-            var url = $(this).attr('href');
-            $('.mask').fadeIn(250, function() {
-                document.location.href = url;
-            });
-            $("#loader").fadeIn("slow");
-            return false;
+        // niceScroll
+        $("html").niceScroll({
+            scrollspeed: 51,
+            mousescrollstep: 45,
+        });
+        // scroll
+        $('a.scroll[href*="#"]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
         });
     })
 </script>
